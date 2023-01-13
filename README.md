@@ -11,5 +11,8 @@ ssh root@[host]
 instalar lnmp(Linux, Nginx, MariaDB, PHP) manualmente.     
 1. instalamos nginx
 ```bash
+apt update 
 apt install nginx 
 ```
+
+2. 
