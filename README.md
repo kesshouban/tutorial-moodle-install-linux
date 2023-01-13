@@ -136,7 +136,7 @@ phpinfo();
 ?>
 ```
 si salimos este es decir la configuracion ya es completada
-![img]
+![img](https://github.com/kesshouban/tutorial-moodle-install-linux/raw/main/pic/2.png)
 
 ## Tercer Paso
 1. descargar y configuramos moodle 
@@ -160,5 +160,25 @@ cd moodle
 mv * ../
 mv.* ../
 ```
-## cuarto paso 
-1. configuramos moodle
+## cuarto paso. configuramos moodle
+1. 
+![img](https://github.com/kesshouban/tutorial-moodle-install-linux/raw/main/pic/3.png)
+seleccionamos English y pinchar next    
+
+2. 
+![img](https://github.com/kesshouban/tutorial-moodle-install-linux/raw/main/pic/4.png)
+dejar todo sin cambiar y pinchar next      
+
+3.     
+![img](https://github.com/kesshouban/tutorial-moodle-install-linux/raw/main/pic/5.png)    
+ponemos los credenciales del mariadb y next
+
+4. 
+![img](https://github.com/kesshouban/tutorial-moodle-install-linux/raw/main/pic/6.png)   
+todo sale ok continuamos
+
+5. 
+![img](https://github.com/kesshouban/tutorial-moodle-install-linux/raw/main/pic/8.png)   
+
+comfiguramos cuenta de admin y ya esta
+
