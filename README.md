@@ -1,6 +1,7 @@
 # tutorial-moodle-install-linux
-un totorial de la instalacion del moodle en debian 11
-
+un totorial de la instalacion del moodle en debian 11    
+demo curse     
+http://208.85.22.192/course/view.php?id=2
 ## primer paso 
 1. connectar al servidor       
 
