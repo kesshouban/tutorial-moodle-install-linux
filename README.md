@@ -2,21 +2,20 @@
 un totorial de la instalacion del moodle en debian 11
 
 ## primer paso 
-connectar al servidor       
+1. connectar al servidor       
 
 ``` powershell 
 ssh root@[host] 
 ```     
 ## segundo paso
-instalar lnmp(Linux, Nginx, MariaDB, PHP) manualmente.     
+ instalar lnmp(Linux, Nginx, MariaDB, PHP manualmente.     
 1. instalamos nginx
 ```bash
 apt update 
 apt install nginx 
 ```
-
-2. 
-instalar mariadb
+![img](https://github.com/kesshouban/tutorial-moodle-install-linux/raw/main/pic/1.png)    
+2. instalar mariadb
 ```bash
 apt install mariadb-server
 ```
@@ -106,10 +105,14 @@ nano /etc/nginx/sites-available/default
 ```
 añadimos los siguiente lineas al final del archivo
 ```bash
-location ~ \.php$ {
-        include snippets/fastcgi-php.conf;
-        fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
-} 
+location ~ [^/]\.php(/|$) {
+    fastcgi_split_path_info  ^(.+\.php)(/.+)$;
+    fastcgi_index            index.php;
+    fastcgi_pass             unix:/var/run/php/php7.4-fpm.sock;
+    include                  fastcgi_params;
+    fastcgi_param   PATH_INFO       $fastcgi_path_info;
+    fastcgi_param   SCRIPT_FILENAME $document_root$fastcgi_script_name;
+}
 ```
 comprobar la configuracion que esta bien utilizando el commando `nginx -t`
 ```bash
@@ -136,7 +139,7 @@ si salimos este es decir la configuracion ya es completada
 ![img]
 
 ## Tercer Paso
-descargar y configuramos moodle 
+1. descargar y configuramos moodle 
 ```bash
 root@vultr:~# wget https://download.moodle.org/download.php/stable401/moodle-latest-401.zip
 --2023-01-13 15:58:44--  https://download.moodle.org/download.php/stable401/moodle-latest-401.zip
@@ -158,4 +161,4 @@ mv * ../
 mv.* ../
 ```
 ## cuarto paso 
-configuramos moodle
+1. configuramos moodle
