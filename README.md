@@ -150,3 +150,12 @@ moodle-latest-401.zip             [ <=>                                         
 
 2023-01-13 15:58:45 (42.9 MB/s) - ‘moodle-latest-401.zip’ saved [61212]
 ```
+luego ejecutar los commandos en `/var/www/html`
+```bash
+unzip moodle-latest-401.zip
+cd moodle
+mv * ../
+mv.* ../
+```
+## cuarto paso 
+configuramos moodle
